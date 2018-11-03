@@ -1,0 +1,15 @@
+.block {
+	display: block;
+}
+.list {
+	display: flex;
+	flex-direction: column;
+
+}
+.item {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+

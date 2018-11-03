@@ -1,19 +1,20 @@
 {
-  "name": "kaspersky-book",
+  "name": "gazprom",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "node-sass": "^4.9.4",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-    "react-scripts": "2.0.5",
     "react-redux": "^5.0.7",
     "react-router-redux": "^4.0.8",
+    "react-scripts": "2.0.5",
     "redux": "^4.0.0",
     "redux-saga": "^0.16.0",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "eslint": "^5.8.0",
+    "eslint": "^5.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
