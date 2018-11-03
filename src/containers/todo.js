@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import { styles } from './Todo.scss';
-console.log("styles", styles);
+import './todo.scss';
 // import './Todo.module.scss';
 class Todo extends Component {
 	render() {
 
 		const children = this.props.todoList.map((item)=>(
-			<li className={styles} key={item.id}>
+			<li className="todo-item" key={item.id}>
 				<span>{item.id}</span>
 				<p>{item.text}</p>
 				<input type="checkbox" onChange={()=>true} checked={ item.ready ? 'checked' : '' } />
@@ -16,7 +15,7 @@ class Todo extends Component {
 			)
 		)
 		return (
-			<div className="todoBlock">
+			<div className="todo-block">
 				<ul className="todo-list">
 					{children}
 				</ul>
