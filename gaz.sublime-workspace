@@ -1,0 +1,612 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"max",
+				"max-width\tproperty"
+			],
+			[
+				"sele",
+				"selectedIndex"
+			],
+			[
+				"p",
+				"perspective\tproperty"
+			],
+			[
+				"color",
+				"colorSecond"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"drop",
+				"dropListeReducer"
+			],
+			[
+				"bind",
+				"bindActionCreators"
+			],
+			[
+				"inpu",
+				"inputedValue"
+			],
+			[
+				"in",
+				"inputedValue"
+			],
+			[
+				"scro",
+				"scrollDir"
+			],
+			[
+				"get",
+				"getBoundingClientRect"
+			],
+			[
+				"s",
+				"startPoint"
+			],
+			[
+				"so",
+				"sortIndex"
+			],
+			[
+				"styl",
+				"list-style-type"
+			],
+			[
+				"con",
+				"align-content"
+			],
+			[
+				"ali",
+				"align-items"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "Package Control Messages\n========================\n\nSass\n----\n\n  Sass 2.1\n  ======================\n  \n  In 2.1 this package switches back to the source.scss scope.\n  This should improve compatibility with other packages like\n  the Vue syntax. In addition it paves the way for better\n  integration of Sass functions and enable (in the future) CSS\n  completions in the Sass syntax.\n\n  Sass 2.0\n  ======================\n  \n  Thank you for installing Sass for Sublime Text.\n  \n  2.0 supports things like flex-box syntax, custom properties, function snippets\n  and more for both Sass and SCSS.\n  It is now also in line with the scope naming guidelines for Sublime Text 3.0,\n  highlighting should be very similar to CSS and LESS.\n  \n  If something doesn't work for you let us know at:\n  https://github.com/braver/SublimeSass\n  \n  1.x is still available as a different package: \"Syntax Highlighting for Sass\":\n  https://github.com/P233/Syntax-highlighting-for-Sass\n",
+			"settings":
+			{
+				"buffer_size": 957,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"file": "src/App.js",
+			"settings":
+			{
+				"buffer_size": 636,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 480.0
+	},
+	"console":
+	{
+		"height": 216.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/projects/gazprom-tz",
+		"/D/projects/gazprom-tz/src"
+	],
+	"file_history":
+	[
+		"/D/projects/Kaspersky-book/kaspersky-book/src/sagas/saga1.js",
+		"/D/projects/v-tree/src/containers/imgFromGoogle.js",
+		"/D/projects/v-tree/src/reducers/dropListReducer.js",
+		"/D/projects/v-tree/src/sagas/tagSelected.js",
+		"/D/projects/v-tree/src/sagas/search.js",
+		"/D/projects/v-tree/src/reducers/autocompleteReducer.js",
+		"/D/projects/v-tree/src/reducers/contentReducer.js",
+		"/D/projects/v-tree/src/components/preloadersvg.js",
+		"/D/projects/v-tree/src/containers/app.css",
+		"/D/projects/v-tree/src/components/products.css",
+		"/D/projects/v-tree/src/containers/autocomplete/autocomplete.css",
+		"/D/projects/v-tree/src/components/vitamin.css",
+		"/D/projects/v-tree/src/containers/App.js",
+		"/D/projects/v-tree/src/components/vitamin.js",
+		"/D/projects/v-tree/src/components/v-tree-logo.js",
+		"/D/projects/v-tree/src/api/v-tree-api.js",
+		"/D/projects/v-tree/src/sagas/sagaRoot.js",
+		"/D/projects/v-tree/src/store/configureStore.js",
+		"/D/projects/v-tree/package.json",
+		"/D/Reminders-code/generators.html",
+		"/D/projects/v-tree/node_modules/google-images-url/tests/create.test.js",
+		"/D/projects/v-tree/src/selectors/autocompleteSelectors.js",
+		"/D/projects/v-tree/src/containers/autocomplete/dropdownList.js",
+		"/D/projects/v-tree/src/containers/autocomplete/buttonTag.js",
+		"/D/projects/v-tree/src/actions/autocompleteActions.js",
+		"/D/projects/v-tree/node_modules/google-images-url/README.md",
+		"/D/projects/v-tree/src/reducers/productReducer.js",
+		"/d/projects/v-tree/src/components/vitamin.js",
+		"/D/projects/v-tree/src/reducers/buttonTagReducer.js",
+		"/D/projects/v-tree/src/reducers/index.js",
+		"/d/projects/v-tree/src/containers/autocomplete/buttonTag.js",
+		"/D/projects/v-tree/src/components/vitaminsvg.js",
+		"/D/projects/v-tree/config/webpack.config.prod.js",
+		"/D/projects/v-tree/config/webpackDevServer.config.js",
+		"/D/projects/v-tree/config/webpack.config.dev.js",
+		"/D/projects/v-tree/src/actions/histogram.js",
+		"/D/projects/v-tree/src/hoc/withCrud.js",
+		"/D/projects/v-tree/src/hoc/VitaminTreeAPI.js",
+		"/D/projects/v-tree/src/containers/autocomplete/listComp.js",
+		"/D/Reminders-code/touch.html",
+		"/D/Reminders-code/laba.js",
+		"/D/Reminders-code/mouseDrectionTest.html",
+		"/D/Reminders-code/touch-2.html",
+		"/D/Distr/Sublime Text 3 build 3126/Data/Packages/User/hello.sublime-snippet",
+		"/C/Users/Petyan/Desktop/start2.html",
+		"/D/Reminders-code/es6.html",
+		"/D/Reminders-code/aasd.html",
+		"/D/Distr/Sublime Text 3 build 3126/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/D/Distr/Sublime Text 3 build 3126/Data/Packages/User/EasyMotion.sublime-settings",
+		"/D/Distr/Sublime Text 3 build 3126/Data/Packages/EasyMotion/README.md",
+		"/D/Distr/Sublime Text 3 build 3126/Data/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 105.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 957,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								957,
+								957
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"default_dir": "D:\\projects\\Kaspersky-book\\kaspersky-book\\src",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/App.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 636,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": 59,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "gaz.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"prefe",
+				"Data\\Packages\\User\\Preferences.sublime-settings"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\Dropbox\\Cooding\\React-Redux-test\\React-Redux-test.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 231.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
