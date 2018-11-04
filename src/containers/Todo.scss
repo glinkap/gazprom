@@ -32,6 +32,11 @@
 		&:hover {
 			background-color: hsl(14, 100%, 58%);
 		}
+		input {
+			// min-height: 40px;
+			padding: 12px;
+			font-size: 21px;
+		}
 		// display: flex;
 		// flex-direction: row;
 		// justify-content: space-between;

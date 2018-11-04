@@ -36,7 +36,12 @@ export default function todo(state = initialState, action) {
 			return {
 				...state, 
 			} 
-		} 		
+		}
+		case types.TODO_APPLY_TASK: {
+			return {
+				...state, editing:false, newTxtVal:action.payload.newTxtVal, editableId: action.payload.editableId
+			} 
+		}  		 		
 		default: return state;
 	}
 

@@ -5,3 +5,4 @@ export const TODO_REMOVE = 'TODO_REMOVE';
 export const TODO_EDIT = 'TODO_EDIT';  
 export const TODO_EDIT_START = 'TODO_EDIT_START';  
 export const TODO_EDIT_END = 'TODO_EDIT_END';  
+export const TODO_APPLY_TASK = 'TODO_APPLY_TASK';  
