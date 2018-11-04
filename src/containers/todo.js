@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import './todo.scss';
-// import './Todo.module.scss';
+import { getSessionData, setSessionData, getRev, sessionStorage } from '../actions/actions';
+import TodoItem from './todoItem';
+import { AddBtn } from '../components/button';
+const rev = 0;
 class Todo extends Component {
+
+	componentWillMount() {
+		this.props.sessionStorage({ rev, dispatch: this.props.dispatch });
+	}
 	render() {
 
 		const children = this.props.todoList.map((item)=>(
-			<li className="todo-item" key={item.id}>
-				<span>{item.id}</span>
-				<p>{item.text}</p>
-				<input type="checkbox" onChange={()=>true} checked={ item.ready ? 'checked' : '' } />
-			 	<button type="button">Edit</button>
-		 	</li>
+			<TodoItem key={item.id} text={item.text} id={item.id} className="todo-item" />			
 			)
 		)
 		return (
@@ -19,7 +21,7 @@ class Todo extends Component {
 				<ul className="todo-list">
 					{children}
 				</ul>
-				<button type="button">Add</button>
+				<AddBtn >Add</AddBtn>
 			</div>
 			);
 	}
@@ -30,6 +32,16 @@ const mapStateToProps = (state) => {
 		todoList: state.todo.data
 	}
 }
-
-export default connect ( mapStateToProps, 
-						mapDispatchToProps => ({}) )(Todo);
+const mapDispatchToProps = (dispatch) => {
+	return {
+		addTask: () => {},		
+		removeTask: () => {},
+		readyTask: () => {},
+		getDataStorage: getSessionData,
+		setDataStorage: setSessionData,
+		getRev: getRev,
+		sessionStorage:sessionStorage,
+		dispatch
+	}
+}
+export default connect ( mapStateToProps, mapDispatchToProps )( Todo );
