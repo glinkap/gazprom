@@ -2,7 +2,8 @@ import * as actions from '../actions/actions';
 import * as types from '../actions/types';
 const initialState = {
 	editing: false,
-	editableId:0
+	editableId:0,
+	ready: false
 
 }
 export default function todo(state = initialState, action) {
@@ -22,7 +23,6 @@ export default function todo(state = initialState, action) {
 				...state, editing: false
 			} 
 		}
-		
 		default: return state;
 	}
 

@@ -28,7 +28,6 @@ const initialState = {
 export default function todo(state = initialState, action) {
 	switch(action.type) {		
 		case types.TODO_GET_SESSION_DATA: {
-				console.log("action", action);
 			return {
 				...state, data: action.payload
 			} 
@@ -63,6 +62,19 @@ export default function todo(state = initialState, action) {
 			const data = state.data.slice().map((el)=>{
 				if (el.id === action.payload.id) {
 					el.text = action.payload.newText
+					return el
+				} else {
+					return el
+				}
+			});
+			return {
+				...state, data
+			} 
+		}
+		case types.TODO_CHECK_TASK_READY: {
+			const data = state.data.slice().map((el)=>{
+				if (el.id === action.payload.id) {
+					el.ready = !action.payload.ready
 					return el
 				} else {
 					return el

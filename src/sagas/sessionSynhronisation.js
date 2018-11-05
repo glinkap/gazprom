@@ -24,4 +24,5 @@ export default function* () {
   yield takeLatest(types.TODO_APPLY_TASK, setSessionDataGen);
   yield takeLatest(types.TODO_ADD, setSessionDataGen);
   yield takeLatest(types.TODO_REMOVE, setSessionDataGen);
+  yield takeLatest(types.TODO_CHECK_TASK_READY, setSessionDataGen);
 }

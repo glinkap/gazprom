@@ -11,15 +11,17 @@ class Todo extends Component {
 		this.props.sessionStoragem({ rev, dispatch: this.props.dispatch });		
 	}
 	render() {
-		if (!this.props.todoList.length) {
+		const { addNewTask, todoList, } = this.props
+		
+		if (!todoList.length) {
 			return ( 
 				<div className="todo-block">
 					<p>Нет ни одного таска</p>
-					<AddBtn onClick={ this.props.addNewTask } >Add</AddBtn>
+					<AddBtn onClick={ addNewTask } >Add</AddBtn>
 				</div>
 					)
 		} else {
-			const children = this.props.todoList.map((item, i, arr)=>(
+			const children = todoList.map((item, i, arr)=>(
 				<TodoItem key={i} text={item.text} id={item.id} className="todo-item" />			
 				)
 			)
@@ -28,7 +30,7 @@ class Todo extends Component {
 					<ul className="todo-list">
 						{children}
 					</ul>
-					<AddBtn onClick={ this.props.addNewTask } >Add</AddBtn>
+					<AddBtn onClick={ addNewTask } >Add</AddBtn>
 				</div>
 				);			
 		}
