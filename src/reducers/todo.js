@@ -28,6 +28,7 @@ const initialState = {
 export default function todo(state = initialState, action) {
 	switch(action.type) {		
 		case types.TODO_GET_SESSION_DATA: {
+				console.log("action", action);
 			return {
 				...state, data: action.payload
 			} 

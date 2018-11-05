@@ -35,18 +35,16 @@ class TodoItem extends Component {
 		if ( this.props.editing && (this.props.editableId === this.props.id) ) { //Как сравнить с текущим ???
 			return (
 				<li  className="todo-item">
-					<span>{this.props.id}</span>
+					{/*<span>{this.props.id}</span>*/}
 					<input type="text" placeholder={this.props.text} ref="editInput" />
-					<input type="checkbox"  />
 				 	<ApplyBtn onClick={ this.getDataForApplyTask } >Apply</ApplyBtn>
 			 	</li>
 			)
 		} else {
 			return ( 
 				<li  className="todo-item" >
-					<span>{this.props.id}</span>
+					{/*<span>{this.props.id}</span>*/}
 					<p onClick={ this.clickHandler }>{ this.props.text }</p>
-					<input type="checkbox" />
 				 	<AddBtn onClick={ this.removeTaskHandler } >Remove</AddBtn>
 			 	</li>
 			)

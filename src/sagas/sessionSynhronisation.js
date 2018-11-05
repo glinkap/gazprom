@@ -1,5 +1,5 @@
 import { call, put, takeEvery, takeLatest, select } from 'redux-saga/effects';
-import { setSessionData } from '../actions/actions';
+// import { setSessionData } from '../actions/actions';
 import * as types from '../actions/types';
 // import { delay } from 'redux-saga';
 // import * as Api from '../api/v-tree-api';
