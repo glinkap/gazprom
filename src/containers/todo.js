@@ -19,8 +19,8 @@ class Todo extends Component {
 				</div>
 					)
 		} else {
-			const children = this.props.todoList.map((item)=>(
-				<TodoItem key={item.id} text={item.text} id={item.id} className="todo-item" />			
+			const children = this.props.todoList.map((item, i, arr)=>(
+				<TodoItem key={i} text={item.text} id={item.id} className="todo-item" />			
 				)
 			)
 			return (
@@ -45,8 +45,6 @@ const mapDispatchToProps = (dispatch) => {
 	return {		
 		readyTask: () => {},
 		getDataStorage: getSessionData,
-		// setDataStorage: setSessionData,
-		// getRev: getRev,
 		sessionStoragem:sessionStoragem,
 		dispatch,
 		addNewTask: () => {

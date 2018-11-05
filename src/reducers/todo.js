@@ -39,7 +39,7 @@ export default function todo(state = initialState, action) {
 		}
 		case types.TODO_ADD: {
 			const data = state.data.slice();
-			data.push({ text:'Новая задачка?', ready: false, id: state.data.length + 1  })
+			data.push({ text:'Новая задачка?', ready: false, id: ++state.data.length  })
 			return {
 				...state, data
 			} 
