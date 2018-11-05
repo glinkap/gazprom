@@ -8,6 +8,7 @@ class TodoItem extends Component {
 	constructor(props) {
 		super(props)
 		this.clickHandler = this.clickHandler.bind(this)
+		this.getDataForApplyTask = this.getDataForApplyTask.bind(this)
 	}
     clickHandler () {
 	    // const area = ReactDOM.findDOMNode(this.refs.area);
@@ -17,8 +18,8 @@ class TodoItem extends Component {
     	this.props.editTask({id: this.props.id});
   	}
  	getDataForApplyTask () {
- 		const newTxtVal = this.refs.newTxt.value;
-		this.props.applyTask( { newTxtVal, editableId:this.props.id } );
+ 		const newText = this.refs.editInput.value;
+		this.props.applyTask( { id: this.props.id, newText: newText } );
  	}
   	componentDidUpdate() {
   		if ( this.props.editing && this.refs.editInput ) {
@@ -27,7 +28,7 @@ class TodoItem extends Component {
   		}
   	}
 	render() {
-		if ( this.props.editing && (this.props.editableId == this.props.id) ) { //Как сравнить с текущим ???
+		if ( this.props.editing && (this.props.editableId === this.props.id) ) { //Как сравнить с текущим ???
 			return (
 				<li  className="todo-item">
 					<span>{this.props.id}</span>
@@ -60,8 +61,9 @@ const mapDispatchToProps = (dispatch) => {
 		editTask: ( { id } )=>{
 			dispatch({type:types.TODO_EDIT_START, payload: { editing: true, id } } )	
 		},
-		applyTask: ( { newTxtVal, editableId } ) => {
-			dispatch( { type: types.TODO_APPLY_TASK, payload: { newTxtVal, editableId } } );
+		applyTask: ( { id, newText } ) => {
+			dispatch( { type: types.TODO_APPLY_TASK, payload: { id, newText } } );
+			dispatch( { type: types.TODO_EDIT_END } );
 		}
 	}
 }

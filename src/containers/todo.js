@@ -4,6 +4,7 @@ import './todo.scss';
 import { getSessionData, setSessionData, getRev, sessionStorage } from '../actions/actions';
 import TodoItem from './todoItem';
 import { AddBtn } from '../components/button';
+import * as types from '../actions/types';
 const rev = 0;
 class Todo extends Component {
 
@@ -11,7 +12,6 @@ class Todo extends Component {
 		this.props.sessionStorage({ rev, dispatch: this.props.dispatch });
 	}
 	render() {
-
 		const children = this.props.todoList.map((item)=>(
 			<TodoItem key={item.id} text={item.text} id={item.id} className="todo-item" />			
 			)
@@ -21,7 +21,7 @@ class Todo extends Component {
 				<ul className="todo-list">
 					{children}
 				</ul>
-				<AddBtn >Add</AddBtn>
+				<AddBtn onClick={ this.props.addNewTask } >Add</AddBtn>
 			</div>
 			);
 	}
@@ -41,7 +41,10 @@ const mapDispatchToProps = (dispatch) => {
 		setDataStorage: setSessionData,
 		getRev: getRev,
 		sessionStorage:sessionStorage,
-		dispatch
+		dispatch,
+		addNewTask: () => {
+			dispatch( { type: types.TODO_ADD } )
+		}
 	}
 }
 export default connect ( mapStateToProps, mapDispatchToProps )( Todo );

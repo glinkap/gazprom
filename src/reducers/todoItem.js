@@ -17,6 +17,11 @@ export default function todo(state = initialState, action) {
 				...state, 
 			} 
 		}
+		case types.TODO_EDIT_END: {
+			return {
+				...state, editing: false
+			} 
+		}
 		
 		default: return state;
 	}

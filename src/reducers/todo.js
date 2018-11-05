@@ -37,9 +37,24 @@ export default function todo(state = initialState, action) {
 				...state, 
 			} 
 		}
-		case types.TODO_APPLY_TASK: {
+		case types.TODO_ADD: {
+			const data = state.data.slice();
+			data.push({ text:'Новая задачка?', ready: false, id: state.data.length + 1  })
 			return {
-				...state, editing:false, newTxtVal:action.payload.newTxtVal, editableId: action.payload.editableId
+				...state, data
+			} 
+		}
+		case types.TODO_APPLY_TASK: {
+			const data = state.data.slice().map((el)=>{
+				if (el.id === action.payload.id) {
+					el.text = action.payload.newText
+					return el
+				} else {
+					return el
+				}
+			});
+			return {
+				...state, data
 			} 
 		}  		 		
 		default: return state;
