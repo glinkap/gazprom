@@ -5,14 +5,14 @@ const Btn = ({ className='', edit, apply, add, ...props }) =>
     type="button"
     className={
       `btn 
-      ${edit && "btn-edit" ||
-      apply && "btn-apply" ||
-      add && "btn-add" 
-      } ${className}
+      ${edit ? "btn-edit":''}
+      ${apply ? "btn-apply":''}
+      ${add ? "btn-add":''} 
+      ${className}
       `
     }
     {...props}
-  >{edit && 'Edit' || apply && 'Apply' || add && 'Add'}</button>
+  ></button>
 export const EditBtn = props =><Btn {...props} edit />
 export const ApplyBtn = props =><Btn {...props} apply />
 export const AddBtn = props =><Btn {...props} add />
