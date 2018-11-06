@@ -6,7 +6,7 @@ export default class Checkbox extends React.Component {
     }
     componentWillMount() {
         console.log("mount - ch");
-        this.setState({ isChecked: this.props.status });
+        this.setState({ isChecked: this.props.receivechecked });
     }
     
     handleChange = (e) => {
@@ -15,7 +15,7 @@ export default class Checkbox extends React.Component {
     }
     componentWillReceiveProps(nextProps) {
         console.log("nextProps", nextProps);
-        this.setState({ isChecked: nextProps.status });
+        this.setState({ isChecked: nextProps.receivechecked });
     }
     componentWillUpdate() {
         console.log("update - ch");

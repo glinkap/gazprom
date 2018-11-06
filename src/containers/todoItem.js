@@ -19,8 +19,10 @@ class TodoItem extends Component {
   		this.props.removeTask( { id: this.props.id } );
   	}
  	getDataForApplyTask () {
+ 		console.log("this.refs.editInput", this.refs.editInput);
  		const newText = this.refs.editInput.value;
-		this.props.applyTask( { id: this.props.id, newText: newText } );
+ 		const oldText = this.props.text;
+		this.props.applyTask( { id: this.props.id, newText, oldText } );
  	}
  	componentWillMount () {
  		console.log("componentWillMount - item");
@@ -41,17 +43,15 @@ class TodoItem extends Component {
 		if ( editing && ( editableId === id ) ) {
 			return (
 				<li  className="todo-item">
-					{/*<span>{this.props.id}</span>*/}
-				 	<input type="checkbox"  taskready={ ( { checked } ) => { taskReady( { id: id, ready: checked } ) } } status={ ready } />
-					<input type="text" placeholder={ text } ref="editInput" />
+				 	<Checkbox type="checkbox" taskready={ ( { checked } ) => { taskReady( { id: id, ready: checked } ) } }  receivechecked={ ready }  />
+					<input type="text" placeholder={ text } onBlur={ this.getDataForApplyTask } ref="editInput" />
 				 	<ApplyBtn onClick={ this.getDataForApplyTask } >Apply</ApplyBtn>
 			 	</li>
 			)
 		} else {
 			return ( 
 				<li  className="todo-item" >
-					{/*<span>{this.props.id}</span>*/}
-					<Checkbox type="checkbox" taskready={ ( { checked } ) => { taskReady( { id: id, ready: checked } ) } }  status={ ready }  />
+					<Checkbox type="checkbox" taskready={ ( { checked } ) => { taskReady( { id: id, ready: checked } ) } }  receivechecked={ ready }  />
 					<p onClick={ this.clickHandler }>{ text }</p>
 				 	<AddBtn onClick={ this.removeTaskHandler } >Remove</AddBtn>
 			 	</li>
@@ -71,7 +71,8 @@ const mapDispatchToProps = (dispatch) => {
 		editTask: ( { id } )=>{
 			dispatch({type:types.TODO_EDIT_START, payload: { editing: true, id } } )	
 		},
-		applyTask: ( { id, newText } ) => {
+		applyTask: ( { id, newText, oldText } ) => {
+			if (newText === '') newText = oldText
 			dispatch( { type: types.TODO_APPLY_TASK, payload: { id, newText } } );
 			dispatch( { type: types.TODO_EDIT_END } );
 		},

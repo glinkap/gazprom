@@ -2,8 +2,7 @@ import * as actions from '../actions/actions';
 import * as types from '../actions/types';
 const initialState = {
 	editing: false,
-	editableId:0
-
+	editableId: 0
 }
 export default function todo(state = initialState, action) {
 	switch(action.type) {		
