@@ -12,11 +12,11 @@ class Todo extends Component {
 
 	}
 	componentWillMount() {
-		console.log("componentWillMount");
+		// console.log("componentWillMount");
 		// this.props.sessionStoragem({ rev, dispatch: this.props.dispatch });		
 	}
 	componentDidMount() {
-		console.log("componentDidMount");
+		// console.log("componentDidMount");
 		this.props.sessionStoragem({ rev, dispatch: this.props.dispatch });		
 	}
 	render() {

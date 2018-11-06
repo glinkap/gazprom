@@ -3,6 +3,7 @@
 		display: block;
 		margin:auto;
 		padding: 20px;
+		margin: 0 10px;
 		& > [type="button"] {
 			display: block;
 			margin-left:auto;
@@ -32,10 +33,13 @@
 		&:hover {
 			background-color: hsl(14, 100%, 58%);
 		}
-		input {
+		&-input {
 			// min-height: 40px;
 			padding: 12px;
 			font-size: 21px;
+			margin: 5px 10px;
+			font-size: 18px;
+			// border-radius:25px;
 		}
 		// display: flex;
 		// flex-direction: row;

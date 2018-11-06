@@ -19,20 +19,19 @@ class TodoItem extends Component {
   		this.props.removeTask( { id: this.props.id } );
   	}
  	getDataForApplyTask () {
- 		console.log("this.refs.editInput", this.refs.editInput);
  		const newText = this.refs.editInput.value;
  		const oldText = this.props.text;
 		this.props.applyTask( { id: this.props.id, newText, oldText } );
  	}
  	componentWillMount () {
- 		console.log("componentWillMount - item");
+ 		// console.log("componentWillMount - item");
 
  	}
   	componentWillUpdate() {
-		console.log("componentWillUpdate item");
+		// console.log("componentWillUpdate item");
   	}
   	componentDidUpdate() {
-  		console.log("componentDidUpdate - item");
+  		// console.log("componentDidUpdate - item");
   		if ( this.props.editing && this.refs.editInput ) {
   			const editInput = this.refs.editInput
   			editInput.focus();
@@ -44,7 +43,13 @@ class TodoItem extends Component {
 			return (
 				<li  className="todo-item">
 				 	<Checkbox type="checkbox" taskready={ ( { checked } ) => { taskReady( { id: id, ready: checked } ) } }  receivechecked={ ready }  />
-					<input type="text" placeholder={ text } onBlur={ this.getDataForApplyTask } ref="editInput" />
+					<input type="text" 
+						placeholder={ text } 
+						onBlur={ this.getDataForApplyTask } 
+						ref="editInput" 
+						className="todo-item-input" 
+						onKeyPress={ (e) => (e.key === 'Enter') ? this.getDataForApplyTask() : false}
+					/>
 				 	<ApplyBtn onClick={ this.getDataForApplyTask } >Apply</ApplyBtn>
 			 	</li>
 			)

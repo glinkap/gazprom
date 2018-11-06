@@ -5,7 +5,7 @@ export default class Checkbox extends React.Component {
        
     }
     componentWillMount() {
-        console.log("mount - ch");
+        // console.log("mount - ch");
         this.setState({ isChecked: this.props.receivechecked });
     }
     
@@ -14,11 +14,10 @@ export default class Checkbox extends React.Component {
        this.props.taskready({ checked: e.target.checked });
     }
     componentWillReceiveProps(nextProps) {
-        console.log("nextProps", nextProps);
         this.setState({ isChecked: nextProps.receivechecked });
     }
     componentWillUpdate() {
-        console.log("update - ch");
+        // console.log("update - ch");
     }
     render() {
         return (

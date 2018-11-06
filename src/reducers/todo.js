@@ -4,7 +4,7 @@ const initialState = {
 	data:[
 		{
 			text: 'Разобраться с typeScript', 
-			ready: true,
+			ready: false,
 			id:1
 		},
 		{
@@ -14,13 +14,23 @@ const initialState = {
 		},
 		{
 			text: 'Настроить Linter от AirBnB внутри CreateReactApp v2.0', 
-			ready: false,
+			ready: true,
 			id:3
 		},
 		{
 			text: 'Спроектировать структуру компонентов', 
-			ready: false,
+			ready: true,
 			id:4
+		},
+		{
+			text: 'Использовать SessionStorage', 
+			ready: true,
+			id:5
+		},
+		{
+			text: 'Использовать Redux Saga для отлова экшенов, по которым идет сохранение в Storage', 
+			ready: true,
+			id:6
 		}
 	],
 	rev:0
@@ -28,11 +38,6 @@ const initialState = {
 export default function todo(state = initialState, action) {
 	switch(action.type) {
 		case types.TODO_GET_SESSION_DATA: {
-			const data = new Array();
-			action.payload.forEach( el => data.push(el) );
-				console.log("action.payload", action.payload);
-				console.log("state.data", state.data);
-			console.log("data", data);
 			return {
 				...state, data: action.payload
 			} 
