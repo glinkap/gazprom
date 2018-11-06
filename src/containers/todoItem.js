@@ -13,11 +13,7 @@ class TodoItem extends Component {
 		this.removeTaskHandler = this.removeTaskHandler.bind(this)
 	}
     clickHandler () {
-	    // const area = ReactDOM.findDOMNode(this.refs.area);
-	    // if (area.contains(e.target)) {
-	    // 	this.props.editTask(e.target, this, this.input);
-	    // }
-    	this.props.editTask({id: this.props.id});
+    	this.props.editTask({ id: this.props.id });
   	}
   	removeTaskHandler () {
   		this.props.removeTask( { id: this.props.id } );
@@ -26,7 +22,15 @@ class TodoItem extends Component {
  		const newText = this.refs.editInput.value;
 		this.props.applyTask( { id: this.props.id, newText: newText } );
  	}
+ 	componentWillMount () {
+ 		console.log("componentWillMount - item");
+
+ 	}
+  	componentWillUpdate() {
+		console.log("componentWillUpdate item");
+  	}
   	componentDidUpdate() {
+  		console.log("componentDidUpdate - item");
   		if ( this.props.editing && this.refs.editInput ) {
   			const editInput = this.refs.editInput
   			editInput.focus();
@@ -34,12 +38,11 @@ class TodoItem extends Component {
   	}
 	render() {
 		const { editing, editableId, id, ready, text, taskReady } = this.props
-		console.log("ready", ready);
 		if ( editing && ( editableId === id ) ) {
 			return (
 				<li  className="todo-item">
 					{/*<span>{this.props.id}</span>*/}
-				 	<input type="checkbox" onChange={ taskReady.bind(null, { id: id, ready }) } checked={ ready ? 'isChecked':'' } />
+				 	<input type="checkbox"  taskready={ ( { checked } ) => { taskReady( { id: id, ready: checked } ) } } status={ ready } />
 					<input type="text" placeholder={ text } ref="editInput" />
 				 	<ApplyBtn onClick={ this.getDataForApplyTask } >Apply</ApplyBtn>
 			 	</li>
@@ -48,7 +51,7 @@ class TodoItem extends Component {
 			return ( 
 				<li  className="todo-item" >
 					{/*<span>{this.props.id}</span>*/}
-					<Checkbox type="checkbox" toggleChange={ taskReady.bind(null, { id: id, ready }) }  checked={ ready } />
+					<Checkbox type="checkbox" taskready={ ( { checked } ) => { taskReady( { id: id, ready: checked } ) } }  status={ ready }  />
 					<p onClick={ this.clickHandler }>{ text }</p>
 				 	<AddBtn onClick={ this.removeTaskHandler } >Remove</AddBtn>
 			 	</li>
@@ -61,7 +64,6 @@ const mapStateToProps = (state) => {
 	return {
 		editing: state.todoItem.editing,
 		editableId: state.todoItem.editableId,
-		ready: state.todoItem.ready,
 	}
 }
 const mapDispatchToProps = (dispatch) => {

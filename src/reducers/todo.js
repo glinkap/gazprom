@@ -4,12 +4,12 @@ const initialState = {
 	data:[
 		{
 			text: 'Разобраться с typeScript', 
-			ready: false,
+			ready: true,
 			id:1
 		},
 		{
 			text: 'Использовать PropTypes', 
-			ready: false,
+			ready: true,
 			id:2
 		},
 		{
@@ -19,15 +19,20 @@ const initialState = {
 		},
 		{
 			text: 'Спроектировать структуру компонентов', 
-			ready: true,
+			ready: false,
 			id:4
 		}
 	],
 	rev:0
 }
 export default function todo(state = initialState, action) {
-	switch(action.type) {		
+	switch(action.type) {
 		case types.TODO_GET_SESSION_DATA: {
+			const data = new Array();
+			action.payload.forEach( el => data.push(el) );
+				console.log("action.payload", action.payload);
+				console.log("state.data", state.data);
+			console.log("data", data);
 			return {
 				...state, data: action.payload
 			} 
@@ -72,16 +77,15 @@ export default function todo(state = initialState, action) {
 			} 
 		}
 		case types.TODO_CHECK_TASK_READY: {
-			const data = state.data.slice().map((el)=>{
+			const data = state.data.slice();
+			data.map((el)=>{
 				if (el.id === action.payload.id) {
-					el.ready = !action.payload.ready
-					return el
-				} else {
-					return el
-				}
+					el.ready = action.payload.ready
+				} 
+				return el
 			});
 			return {
-				...state, data
+				...state, data: data
 			} 
 		}  		 		
 		default: return state;

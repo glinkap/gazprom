@@ -7,12 +7,21 @@ import { AddBtn } from '../components/button';
 import * as types from '../actions/types';
 const rev = 0;
 class Todo extends Component {
+	constructor(props) {
+		super(props);
+
+	}
 	componentWillMount() {
+		console.log("componentWillMount");
+		// this.props.sessionStoragem({ rev, dispatch: this.props.dispatch });		
+	}
+	componentDidMount() {
+		console.log("componentDidMount");
 		this.props.sessionStoragem({ rev, dispatch: this.props.dispatch });		
 	}
 	render() {
 		const { addNewTask, todoList, } = this.props
-		
+
 		if (!todoList.length) {
 			return ( 
 				<div className="todo-block">
@@ -22,7 +31,7 @@ class Todo extends Component {
 					)
 		} else {
 			const children = todoList.map((item, i, arr)=>(
-				<TodoItem key={i} text={item.text} id={item.id} className="todo-item" />			
+				<TodoItem key={i} text={item.text} id={item.id} ready={item.ready} className="todo-item" />			
 				)
 			)
 			return (
