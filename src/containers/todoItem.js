@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-// import ReactDOM from 'react-dom';
-import {connect} from 'react-redux';
-import * as types from '../actions/types';
-import { AddBtn, EditBtn, ApplyBtn } from '../components/button';
-import Checkbox from '../components/checkbox';
+import React, { Component } from 'react'
+// import ReactDOM from 'react-dom'
+import {connect} from 'react-redux'
+import * as types from '../actions/types'
+import { AddBtn, EditBtn, ApplyBtn } from '../components/button'
+import Checkbox from '../components/checkbox'
 
 class TodoItem extends Component {
 	constructor(props) {
@@ -23,13 +23,6 @@ class TodoItem extends Component {
  		const oldText = this.props.text;
 		this.props.applyTask( { id: this.props.id, newText, oldText } );
  	}
- 	componentWillMount () {
- 		// console.log("componentWillMount - item");
-
- 	}
-  	componentWillUpdate() {
-		// console.log("componentWillUpdate item");
-  	}
   	componentDidUpdate() {
   		// console.log("componentDidUpdate - item");
   		if ( this.props.editing && this.refs.editInput ) {
@@ -87,4 +80,4 @@ const mapDispatchToProps = (dispatch) => {
 		}
 	}
 }
-export default connect ( mapStateToProps, mapDispatchToProps )( TodoItem );
+export default connect ( mapStateToProps, mapDispatchToProps )( TodoItem )

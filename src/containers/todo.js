@@ -1,27 +1,21 @@
-import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import './todo.scss';
-import { getSessionData/*, setSessionData, getRev*/, sessionStoragem } from '../actions/actions';
-import TodoItem from './todoItem';
-import { AddBtn } from '../components/button';
-import * as types from '../actions/types';
-const rev = 0;
+import { getSessionData /* , setSessionData, getRev */, sessionStoragem } from '../actions/actions';
+import TodoItem from './todoItem'
+import { AddBtn } from '../components/button'
+import * as types from '../actions/types'
+
+const rev = 0
 class Todo extends Component {
 	constructor(props) {
-		super(props);
-
-	}
-	componentWillMount() {
-		// console.log("componentWillMount");
-		// this.props.sessionStoragem({ rev, dispatch: this.props.dispatch });		
+		super(props)
 	}
 	componentDidMount() {
-		// console.log("componentDidMount");
 		this.props.sessionStoragem({ rev, dispatch: this.props.dispatch });		
 	}
 	render() {
 		const { addNewTask, todoList, } = this.props
-
 		if (!todoList.length) {
 			return ( 
 				<div className="todo-block">
